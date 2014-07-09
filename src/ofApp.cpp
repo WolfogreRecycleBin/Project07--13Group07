@@ -22,9 +22,9 @@ void creatBubble(int x,int y)
          bubble[i].x=x; bubble[i].y=y;
          bubble[i].r=rand()%4+1;
          }
-
-}
 return;
+}
+
 }
 //--------------------------------------------------------------
 void updateBubble(void)
