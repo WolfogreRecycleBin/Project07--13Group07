@@ -20,9 +20,11 @@ void creatBubble(int x,int y)
          bubble[i].color.set(rand()%255,rand()%255,rand()%255);
          bubble[i].vx=0;bubble[i].vy=1;
          bubble[i].x+=bubble[i].vx;bubble[i].y+=bubble[i].vy;
-      }
-}
+         bubble[i].r=rand()%4+1;
+         }
 
+}
+return;
 }
 //--------------------------------------------------------------
 void updateBubble(void)
