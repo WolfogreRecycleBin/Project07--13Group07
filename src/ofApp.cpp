@@ -21,8 +21,9 @@ void creatBubble(int x,int y)
          bubble[i].vx=0;bubble[i].vy=1;
          bubble[i].x=x; bubble[i].y=y;
          bubble[i].r=rand()%4+1;
+         return;
          }
-return;
+
 }
 
 }
