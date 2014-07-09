@@ -30,10 +30,10 @@ void creatBubble(int x,int y)
 //--------------------------------------------------------------
 void updateBubble(void)
 {
-for(int i=0;i<NUMMAX;i++)
+for(int i=0;i<NUMMAX;i++){
    if(bubble[i].isLive==1 )
 {
-    if(bubble[i].r>=bubble[i].y||bubble[i].r>=bubble[i].x)
+    if(bubble[i].r>=bubble[i].y||bubble[i].r>=bubble[i].x){
         {
             bubble[i].vx=0;
         bubble[i].vy=0;
@@ -41,6 +41,15 @@ for(int i=0;i<NUMMAX;i++)
         if(bubble[i].life>=LIFEMAX)
     bubble[i].isLive=0;
     }
+
+    else {
+            bubble[i].x=bubble[i].x-bubble[i].vx;
+    bubble[i].y=bubble[i].y-bubble[i].vy;
+    bubble[i].r=bubble[i].r+bubble[i].vr;
+    }
+    bubble[i].life++;
+}
+}
 
 }
 //--------------------------------------------------------------
