@@ -1,5 +1,37 @@
 #include "ofApp.h"
+#define NUMMAX 20
+#define LIFEMAX 1000
+struct Bubble
+{
+	int isLive=0;
+	int life;
+	float x,y;
+	float vx,vy;
+	float r;
+	float vr;
+	ofColor color;
+};
+Bubble bubble[NUMMAX];
+//--------------------------------------------------------------
+void creatBubble(int x,int y)
+{
 
+}
+//--------------------------------------------------------------
+void updateBubble(void)
+{
+
+}
+//--------------------------------------------------------------
+void drawBubble(void)
+{
+
+}
+//--------------------------------------------------------------
+void killBubble(int x,int y)
+{
+
+}
 //--------------------------------------------------------------
 void ofApp::setup(){
 
