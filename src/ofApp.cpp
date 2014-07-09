@@ -29,6 +29,17 @@ return;
 //--------------------------------------------------------------
 void updateBubble(void)
 {
+for(int i=0;i<NUMMAX;i++)
+   if(bubble[i].isLive==1 )
+{
+    if(bubble[i].r>=bubble[i].y||bubble[i].r>=bubble[i].x)
+        {
+            bubble[i].vx=0;
+        bubble[i].vy=0;
+        }
+        if(bubble[i].life>=LIFEMAX)
+    bubble[i].isLive=0;
+    }
 
 }
 //--------------------------------------------------------------
