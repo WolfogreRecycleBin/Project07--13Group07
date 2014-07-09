@@ -25,6 +25,27 @@ void updateBubble(void)
 //--------------------------------------------------------------
 void drawBubble(void)
 {
+    for (int i=0;i<NUMMAX;i++)
+    {
+    	if(bubble[i].isLive)
+    	{
+
+    		int tempr=bubble[i].r;
+    		int r=bubble[i].color.r;
+    		int g=bubble[i].color.g;
+    		int b=bubble[i].color.b;
+    		while(tempr>0)
+    		{
+    			ofSetColor(r,g,b);
+    			ofCircle(bubble[i].x,bubble[i].y,tempr);
+    			tempr--;
+    			if(r<253)r+=3;
+    			if(g<253)g+=3;
+    			if(b<253)b+=3;
+    		}
+    	}
+
+    }
 
 }
 //--------------------------------------------------------------
@@ -34,7 +55,10 @@ void killBubble(int x,int y)
 }
 //--------------------------------------------------------------
 void ofApp::setup(){
-
+    bubble[0].isLive=1;
+    bubble[0].x=bubble[0].y=100;
+    bubble[0].r=50;
+    bubble[0].color.set(250,0,0);
 }
 
 //--------------------------------------------------------------
@@ -44,7 +68,7 @@ void ofApp::update(){
 
 //--------------------------------------------------------------
 void ofApp::draw(){
-
+    drawBubble();
 }
 
 //--------------------------------------------------------------
