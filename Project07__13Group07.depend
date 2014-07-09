@@ -1481,7 +1481,7 @@
 1403955760 e:\openframeworks\of_v0.8.2_win_cb_release\apps\myapps\project07--13group07\src\ofapp.h
 	"ofMain.h"
 
-1404915939 source:e:\openframeworks\of_v0.8.2_win_cb_release\apps\myapps\project07--13group07\src\ofapp.cpp
+1404917394 source:e:\openframeworks\of_v0.8.2_win_cb_release\apps\myapps\project07--13group07\src\ofapp.cpp
 	"ofApp.h"
 
 1404903889 source:d:\7777\of_v0.8.2_win_cb_release\apps\myapps\project07--13group07\icon.rc
@@ -2968,7 +2968,7 @@
 
 1404911560 source:c:\users\administrator\desktop\of_v0.8.2_win_cb_release\apps\myapps\project07--13group07\icon.rc
 
-1404911560 source:c:\users\administrator\desktop\of_v0.8.2_win_cb_release\apps\myapps\project07--13group07\src\main.cpp
+1404914933 source:c:\users\administrator\desktop\of_v0.8.2_win_cb_release\apps\myapps\project07--13group07\src\main.cpp
 	"ofMain.h"
 	"ofApp.h"
 
@@ -4447,4 +4447,7 @@
 
 1404911560 c:\users\administrator\desktop\of_v0.8.2_win_cb_release\apps\myapps\project07--13group07\src\ofapp.h
 	"ofMain.h"
+
+1404916217 source:c:\users\administrator\desktop\of_v0.8.2_win_cb_release\apps\myapps\project07--13group07\src\ofapp.cpp
+	"ofApp.h"
 

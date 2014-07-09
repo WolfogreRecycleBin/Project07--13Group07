@@ -1,6 +1,6 @@
 #include "ofApp.h"
-#define NUMMAX 20
-#define LIFEMAX 1000
+#define NUMMAX 30
+#define LIFEMAX 200
 struct Bubble
 {
 	int isLive=0;
@@ -18,10 +18,11 @@ void creatBubble(int x,int y)
       if(bubble[i].isLive==0){
          bubble[i].isLive=1;
          bubble[i].color.set(rand()%255,rand()%255,rand()%255);
-         bubble[i].vx=0;bubble[i].vy=1;
+         bubble[i].vx=0;bubble[i].vy=5;
          bubble[i].x=x; bubble[i].y=y;
          bubble[i].r=rand()%4+1;
-         bubble[i].vr=1;
+         bubble[i].vr=0.8;
+         bubble[i].life=0;
          return;
          }
 }
@@ -30,10 +31,10 @@ void creatBubble(int x,int y)
 //--------------------------------------------------------------
 void updateBubble(void)
 {
-for(int i=0;i<NUMMAX;i++)
+for(int i=0;i<NUMMAX;i++){
    if(bubble[i].isLive==1 )
 {
-    if(bubble[i].r>=bubble[i].y||bubble[i].r>=bubble[i].x)
+    if(bubble[i].r>=bubble[i].y){
         {
             bubble[i].vx=0;
         bubble[i].vy=0;
@@ -41,6 +42,16 @@ for(int i=0;i<NUMMAX;i++)
         if(bubble[i].life>=LIFEMAX)
     bubble[i].isLive=0;
     }
+
+    else {
+            bubble[i].vx=ofRandom(-5,5);
+            bubble[i].x=bubble[i].x-bubble[i].vx;
+    bubble[i].y=bubble[i].y-bubble[i].vy;
+    bubble[i].r=bubble[i].r+bubble[i].vr;
+    }
+    bubble[i].life++;
+}
+}
 
 }
 //--------------------------------------------------------------
@@ -94,6 +105,11 @@ void ofApp::update(){
 
 //--------------------------------------------------------------
 void ofApp::draw(){
+    ofSetColor(0,0,0);
+    ofDrawBitmapString("DESIGNED BY", 10, 15);
+    ofDrawBitmapString("Vivia", 10, 30);
+    ofDrawBitmapString("Tomorrow", 10, 45);
+    ofDrawBitmapString("Wolfogre", 10, 60);
     drawBubble();
 }
 
