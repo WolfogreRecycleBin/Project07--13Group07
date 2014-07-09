@@ -14,7 +14,14 @@ struct Bubble
 Bubble bubble[NUMMAX];
 //--------------------------------------------------------------
 void creatBubble(int x,int y)
-{
+{    for(int i=0;i<20;i++){
+      if(bubble[i].isLive==0){
+         bubble[i].isLive=1;
+         bubble[i].color.set(rand()%255,rand()%255,rand()%255);
+         bubble[i].vx=0;bubble[i].vy=1;
+         bubble[i].x+=bubble[i].vx;bubble[i].y+=bubble[i].vy;
+      }
+}
 
 }
 //--------------------------------------------------------------
@@ -30,6 +37,14 @@ void drawBubble(void)
 //--------------------------------------------------------------
 void killBubble(int x,int y)
 {
+   for(int i=0;i<20;i++){
+       float s=pow((pow(bubble[i].x-x,2)+pow(bubble[i].y-y,2)),0.5);
+       if(s<=bubble[i].r);
+       bubble[i].isLive==0;
+
+   }
+
+
 
 }
 //--------------------------------------------------------------
